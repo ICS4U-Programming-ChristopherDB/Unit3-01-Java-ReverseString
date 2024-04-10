@@ -22,7 +22,7 @@ public final class ReverseString {
    * @param args Unused
    */
   public static void main(final String[] args) {
-    String reversedString = StringReverser("null");
+    String reversedString = stringReverser("null");
     System.out.println(reversedString);
   }
 
@@ -32,7 +32,7 @@ public final class ReverseString {
    * @param inputString passed.
    * @return inputString.
    */
-  private static String StringReverser(String inputString) {
+  private static String stringReverser(final String inputString) {
     // Returns the reversed string once its length is zero.
     if (inputString.length() == 0) {
       return inputString;
@@ -42,7 +42,7 @@ public final class ReverseString {
      * added to the first character of the input string.
      */
     else {
-      return StringReverser(inputString.substring(1)) + inputString.charAt(0);
+      return stringReverser(inputString.substring(1)) + inputString.charAt(0);
     }
   }
 }
